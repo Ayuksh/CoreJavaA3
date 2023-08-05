@@ -9,6 +9,6 @@ class Circle
 	public static void main(String[] args)
 	{
 		area( 10 );
-		area( 10.99 );	
+		area( 9 );	
 	}
 }
