@@ -9,8 +9,7 @@ class AgeCalculator
 		System.out.println("ENTER AGE OF 3 PEOPLE !!");
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		int c = sc.nextInt();
-		
+		int c = sc.nextInt();		
 
 		if(a>b)
 		{
