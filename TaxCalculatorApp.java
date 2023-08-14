@@ -18,7 +18,7 @@ class TaxCalculatorApp
 	}
 
 		
-	public static double taxCalculator( double gs , double s )
+	public static double taxCalculator( double gs , double s ) 
 	{
 		double taxAmt ;
 		double netTax = 0 ;
