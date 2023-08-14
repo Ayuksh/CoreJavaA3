@@ -28,6 +28,6 @@ class AttendenceApp
 		char ch = sc.next().charAt(0);
 		if(ch == 'Y')
 			main(args);
-	}
+31	}
 }
 		
