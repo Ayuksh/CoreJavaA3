@@ -11,6 +11,7 @@ class MainApp1
 
 class Demo1
 {
+
 	static int a = 100 ;
 		
 	public static int display( int b )
