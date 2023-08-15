@@ -3,7 +3,7 @@ class MainApp2
 	public static void main(String[] args)
 	{
 		System.out.println("MAIN METHOD START");
-		new Sample().display()
+		new Sample().display();
 		System.out.println("MAIN METHOD END ");
 	}	
 }
