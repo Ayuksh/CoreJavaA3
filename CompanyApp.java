@@ -36,9 +36,15 @@ class CompanyApp
 
 		Employee emp2 = new Employee();
 		emp2.initEmp(1102 , "VEDANT" , "vad@gmail.com" , 23000 , "TES" );
+		
+		Employee emp3 = new Employee();
+
+		emp1.empDept = "ACC";
+		emp2.empSalary = 44000 ;
 
 		emp1.displayDetails();
 		emp2.displayDetails();
+		emp3.displayDetails();
 	}
 }
 
