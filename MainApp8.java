@@ -7,10 +7,10 @@ class Product
 	String productExp ;
 	String productType ;
 	
-	Product( int id , String name , double price , String maf , String exp , String type )
+	 public Product( int productId , String name , double price , String maf , String exp , String type )
 	{
 		System.out.println("CONSTRUCTOR EXECUTING !!");
-		productId = id ;
+		this.productId = productId ;
 		productName = name ;
 		productPrice = price ;
 		productMaf = maf ;
