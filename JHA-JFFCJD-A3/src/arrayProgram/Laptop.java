@@ -18,12 +18,13 @@ public class Laptop {
 
 
     public void displayDetails() {
-        System.out.println( "Laptop{" +
+        System.out.println("-------------------------------------");
+        System.out.println(
                 "modelNumber=" + modelNumber +
-                ", companyName='" + companyName + '\'' +
-                ", price=" + price +
-                ", processor='" + processor + '\'' +
-                ", storage=" + storage +
-                '}');
+                "\ncompanyName=" + companyName +
+                "\nprice=" + price +
+                "\nprocessor=" + processor +
+                "\nstorage=" + storage );
+        System.out.println("--------------------------------------");
     }
 }
