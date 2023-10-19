@@ -6,6 +6,6 @@ public class Demo {
     }
 
     public void supMethod2(){
-        System.out.println("SUP METHOD 1 !!");
+        System.out.println("SUP METHOD 2 !!");
     }
 }
