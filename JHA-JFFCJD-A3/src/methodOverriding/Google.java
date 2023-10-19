@@ -1,6 +1,6 @@
 package methodOverriding;
 
-public class Google {
+public  class Google {
     public void searching() {
         System.out.println("SEARCHING ON GOOGLE ");
     }
