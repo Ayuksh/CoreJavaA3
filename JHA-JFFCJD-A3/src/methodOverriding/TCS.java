@@ -29,5 +29,13 @@ public class TCS {
 
         emp.displayDetails();
 
+        if (emp instanceof Developer)
+            ((Developer) emp).language();
+        else if (emp instanceof Tester)
+            ((Tester) emp).testingApproach();
+        else if (emp instanceof HR)
+            ((HR) emp).irritatingOther();
+
+
     }
 }
