@@ -22,9 +22,19 @@ public class MainApp {
                 break;
             case 2 :
                 System.out.println(service.getCourseList());
+                break;
+            case 3 :
+                deleteCourse();
+
         }
 
         main(args);
+    }
+
+    private static void deleteCourse() {
+        System.out.println("ENTER A COURSE ID TO BE DELETED !!");
+        int cId = sc.nextInt() ;
+        service.deleteCourse(cId);
     }
 
     private static void addCourseInfo() {
