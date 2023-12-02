@@ -1,5 +1,6 @@
 package CourseApp;
 
+import java.nio.charset.CoderResult;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -48,5 +49,15 @@ public class CourseBLC {
         if (idx == -1)
             return;
         courseList.set(idx , uptCourse);
+    }
+
+    public void findCourseByid(int cId) {
+
+        for (Course c : courseList)
+        {
+            if (c.getCourseId() == cId)
+                System.out.println(c);
+        }
+
     }
 }

@@ -13,7 +13,7 @@ public class MainApp {
         System.out.println("2. DISPLAY COURSES ");
         System.out.println("3. REMOVE COURSE");
         System.out.println("4. UPDATE COURSE ");
-
+        System.out.println("5. SEARCH COURSE BY ID ");
         int ch = sc.nextInt() ;
         switch (ch)
         {
@@ -28,11 +28,19 @@ public class MainApp {
                 break;
             case 4:
                 update();
-            break;
+                break;
+            case 5 :
+                findById();
 
         }
 
         main(args);
+    }
+
+    private static void findById() {
+        System.out.println("ENTER ID");
+        int cId = sc.nextInt() ;
+        service.findCourseByid(cId);
     }
 
     private static void deleteCourse() {
