@@ -47,11 +47,13 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course{" +
-                "courseId=" + courseId +
-                ", courseName='" + courseName + '\'' +
-                ", courseDuration=" + courseDuration +
-                ", courseFees=" + courseFees +
-                '}';
+
+        return "\n-------------------------------------------" +
+                "\nCourse{" +
+                "\ncourseId=" + courseId +
+                ", \ncourseName='" + courseName + '\'' +
+                ", \ncourseDuration=" + courseDuration +
+                ", \ncourseFees=" + courseFees +
+                "\n }";
     }
 }

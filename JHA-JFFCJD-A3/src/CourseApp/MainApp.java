@@ -25,6 +25,10 @@ public class MainApp {
                 break;
             case 3 :
                 deleteCourse();
+                break;
+            case 4:
+                update();
+            break;
 
         }
 
@@ -49,5 +53,20 @@ public class MainApp {
 
         Course course = new Course(cId , cName , cDuration , cFees);
         service.addCourse(course);
+    }
+
+    private static void update(){
+        System.out.println("ENTER COURSE ID ");
+        int cId = sc.nextInt() ;
+        System.out.println("ENTER COURSE NAME ");
+        String cName = sc.next();
+        System.out.println("ENTER COURSE DURATION");
+        double cDuration = sc.nextDouble() ;
+        System.out.println("ENTER COURSE FEES ");
+        double cFees = sc.nextDouble() ;
+
+        Course uptCourse = new Course(cId , cName , cDuration , cFees);
+        service.updateCourse(cId , uptCourse);
+
     }
 }
