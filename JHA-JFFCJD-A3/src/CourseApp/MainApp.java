@@ -14,6 +14,7 @@ public class MainApp {
         System.out.println("3. REMOVE COURSE");
         System.out.println("4. UPDATE COURSE ");
         System.out.println("5. SEARCH COURSE BY ID ");
+        System.out.println("6. SHOW COURSE WITH HIGHEST FEES ");
         int ch = sc.nextInt() ;
         switch (ch)
         {
@@ -31,7 +32,9 @@ public class MainApp {
                 break;
             case 5 :
                 findById();
-
+                break;
+            case 6:
+                service.getCourseWithHighestFees();
         }
 
         main(args);

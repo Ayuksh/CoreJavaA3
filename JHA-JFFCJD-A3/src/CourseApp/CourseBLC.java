@@ -60,4 +60,20 @@ public class CourseBLC {
         }
 
     }
+
+    public void getCourseWithHighestFees() {
+        double highestFees = 0 ;
+        Course highestCourse = null ;
+        for (int i =0 ; i<courseList.size() ; i++)
+        {
+            if (highestFees < courseList.get(i).getCourseFees())
+            {
+                highestFees = courseList.get(i).getCourseFees();
+                highestCourse = courseList.get(i);
+            }
+        }
+
+        System.out.println(highestCourse);
+
+    }
 }
