@@ -14,6 +14,9 @@ public class ProductMainApp {
         System.out.println("2. UPDATE PRODUCT");
         System.out.println("3. DISPLAY ALL PRODUCT");
         System.out.println("4. REMOVE PRODUCT ");
+        System.out.println("5. GET PRODUCT WITH LOWEST PRICE ");
+        System.out.println("6. DISPLAY PRODUCT BY CATEGORY ");
+        System.out.println("7. APPLY FILTER ");
         int ch = sc.nextInt() ;
         switch (ch)
         {
@@ -21,10 +24,33 @@ public class ProductMainApp {
             case 2-> updateProduct();
             case 3-> displayAllProduct();
             case 4 -> deleteProductById();
+            case 5 -> lowestPriceProduct();
+            case 6 -> getByCategory();
+            case 7 -> applyFilter();
         }
 
         main(args);
 
+    }
+
+    private static void applyFilter() {
+        System.out.println("ENTER LOWER VALUE ");
+        double low = sc.nextDouble() ;
+        System.out.println("ENTER UPPER VALUE");
+        double upp = sc.nextDouble();
+
+        service.applyFilter(low , upp);
+    }
+
+    private static void getByCategory() {
+        System.out.println("ENTER CATEGORY ");
+        String category = sc.next();
+        service.getProductsByCategory(category);
+    }
+
+    private static void lowestPriceProduct() {
+        Product lowestProduct = service.getProductWithLowestPrice();
+        System.out.println("\n\n"+lowestProduct+"\n\n");
     }
 
     private static void deleteProductById() {

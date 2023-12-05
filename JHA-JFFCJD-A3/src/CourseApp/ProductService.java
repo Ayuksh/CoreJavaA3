@@ -13,7 +13,6 @@ public class ProductService {
         productList.add(new Product(103 , "MILK" , 30 , "GROCERY"));
         productList.add(new Product(104 , "SALT" , 100 , "GROCERY"));
         productList.add(new Product(105 , "TV" , 35000 , "ELECTRONIC"));
-
     }
 
 
@@ -40,9 +39,36 @@ public class ProductService {
     }
 
     public void deleteProduct(int pId) {
-        for (Product p : productList) {
-            if (p.getProductId() == pId )
-                productList.remove(p);
+        productList.removeIf(p -> p.getProductId() == pId);
+    }
+
+    public Product getProductWithLowestPrice() {
+
+        Product lowestProduct = productList.get(0);
+        double lowestPrice = lowestProduct.getProductPrice();
+        for (Product p : productList)
+        {
+            if (p.getProductPrice()<lowestPrice)
+            {
+                lowestPrice = p.getProductPrice() ;
+                lowestProduct = p ;
+            }
+        }
+        return  lowestProduct ;
+
+    }
+
+    public void getProductsByCategory(String category) {
+        for (Product p : productList)
+            if (p.getProductType().equalsIgnoreCase(category))
+                System.out.println(p);
+    }
+
+    public void applyFilter(double low, double upp) {
+        for (Product p: productList)
+        {
+            if (p.getProductPrice()>low && p.getProductPrice() < upp)
+                System.out.println(p);
         }
     }
 }
